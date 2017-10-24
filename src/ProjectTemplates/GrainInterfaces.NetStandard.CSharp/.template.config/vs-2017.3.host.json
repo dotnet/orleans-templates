@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "name": {
+    "text": "Orleans Grain Interface Collection",
+    "package": "{59E4E5D4-649E-46B7-8BD7-329407E55DE7}",
+    "id": "1000"
+  },
+  "description": {
+    "text": "A project for defining a collection of grain communication interfaces and their payloads",
+    "package": "{59E4E5D4-649E-46B7-8BD7-329407E55DE7}",
+    "id": "1001"
+  },
+  "order": 300,
+  "icon": "GrainInterfaceCSharp.ico",
+  "learnMoreLink": "https://github.com/dotnet/orleans",
+  "uiFilters": [ "orleans" ],
+  "legacyTemplateIdentity": "Orleans.GrainInterfaces.NetStandard.CSharp",
+  "minFullFrameworkVersion": "4.6.1"
+}
