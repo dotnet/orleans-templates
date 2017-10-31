@@ -10,7 +10,7 @@
   "identity": "Orleans.GrainInterfaces.NetStandard.VB",
   "shortName": "graininterfaces",
   "tags": {
-    "language": "VisualBasic",
+    "language": "VB",
     "type": "project"
   },
   "sourceName": "Company.GrainInterfaces",
