@@ -45,6 +45,16 @@
     <VersionSuffix Condition=" '$(VersionDateSuffix)'!='' ">$(VersionSuffix)-$(VersionDateSuffix)</VersionSuffix>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <VersionPrefix Condition=" '$(VersionPrefix)' == '' ">1.0.0</VersionPrefix>
+    <Version Condition=" '$(VersionSuffix)' != '' ">$(VersionPrefix)-$(VersionSuffix)</Version>
+    <Version Condition=" '$(Version)' == '' ">$(VersionPrefix)</Version>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <VsixVersion>$(VersionPrefix)</VsixVersion>
+  </PropertyGroup>
+
   <!-- Set output folder for created NuGet packages -->
 <!--
   <PropertyGroup>

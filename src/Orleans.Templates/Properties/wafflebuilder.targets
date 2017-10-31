@@ -85,7 +85,7 @@
     <Message Text="Outer2:TemplateSourceRoot: [$(TemplateSourceRoot)]" Importance="high"/>
     <MSBuild Projects="$(_cTemplateProj)"
              Targets="Pack;GetNuGetPath;DebugInfo"
-             Properties="Configuration=$(Configuration);TemplateSourceRoot=$(TemplateSourceRoot);PackageOutputPath=$(_templateOutputPathFull)"
+             Properties="Configuration=$(Configuration);TemplateSourceRoot=$(TemplateSourceRoot);PackageOutputPath=$(_templateOutputPathFull);PackageId=$(PackageId)"
              Condition=" '$(_cTemplateProj)' != '' ">
       <Output
           TaskParameter="TargetOutputs"

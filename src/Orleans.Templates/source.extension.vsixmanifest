@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="6a68a4a8-afa6-471c-b464-fd9fc7db2498" Version="1.0.0" Language="en-US" Publisher="Microsoft" />
+    <Identity Id="Microsoft.Orleans.Templates" Version="1.0.0" Language="en-US" Publisher="Microsoft" />
     <DisplayName>Microsoft Orleans Templates for Visual Studio 2017</DisplayName>
     <Description xml:space="preserve">Project and Item templates for Visual Studio 2017.
 C#, F#, VB Project and item templates

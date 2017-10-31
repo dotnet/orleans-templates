@@ -9,7 +9,6 @@
   <PropertyGroup Label="TemplatePackInfo">
     <Authors>Microsoft</Authors>
     <Description>Microsoft Orleans Templates for Visual Studio 2017</Description>
-    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Label="PackageConfiguration">

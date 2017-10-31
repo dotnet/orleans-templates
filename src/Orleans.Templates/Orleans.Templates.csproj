@@ -15,6 +15,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>Orleans.Templates</RootNamespace>
     <AssemblyName>Orleans.Templates</AssemblyName>
+    <TargetName>Microsoft.Orleans.Templates</TargetName>
+    <PackageId>$(TargetName)</PackageId>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>false</IncludeAssemblyInVSIXContainer>
@@ -77,4 +79,13 @@
     <WaffleBuilderTargetsPath Condition=" '$(WaffleBuilderTargetsPath)'=='' ">$(MSBuildProjectDirectory)\Properties\wafflebuilder.targets</WaffleBuilderTargetsPath>
   </PropertyGroup>
   <Import Project="$(WaffleBuilderTargetsPath)" Condition="Exists('$(WaffleBuilderTargetsPath)')" />
+
+  <PropertyGroup>
+    <UpdateVersionInManifestDependsOn>$(UpdateVersionInManifestDependsOn);DetokenizeVsixManifestFile</UpdateVersionInManifestDependsOn>
+  </PropertyGroup>
+
+  <Target Name="UpdateVersionInManifest" DependsOnTargets="$(UpdateVersionInManifestDependsOn)" AfterTargets="DetokenizeVsixManifestFile">
+    <Message Text="Updating XML file at $(IntermediateVsixManifest)" />
+    <XmlPoke XmlInputPath="$(IntermediateVsixManifest)" Query="/n:PackageManifest/n:Metadata/n:Identity/@Version" Namespaces="&lt;Namespace Prefix='n' Uri='http://schemas.microsoft.com/developer/vsx-schema/2011' Name='Required' /&gt;" Value="$(VsixVersion)" />
+  </Target>
 </Project>
