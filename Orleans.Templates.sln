@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2005
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{65358EAF-9C6F-49BE-BCFF-E38AAFBE8B0A}"
 EndProject
@@ -33,6 +33,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Visual Basic", "Visual Basi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FSharp", "FSharp", "{71C9281E-F23E-45C3-A724-D2AB258C3754}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.SiloHost", "src\ProjectTemplates\SiloHost.NetCoreApp.CSharp\Company.SiloHost.csproj", "{76F3BAFD-43C9-461C-AFB6-89198FC6BE76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.OrleansClient", "src\ProjectTemplates\OrleansClient.NetCoreApp.CSharp\Company.OrleansClient.csproj", "{1395B780-8CD4-4B97-859C-30EF19032813}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +57,10 @@ Global
 		{5156599A-A027-4E87-B0CD-9B7E07A5C6EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A949758-70AA-485E-B247-FDB40C8359D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6A949758-70AA-485E-B247-FDB40C8359D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F3BAFD-43C9-461C-AFB6-89198FC6BE76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F3BAFD-43C9-461C-AFB6-89198FC6BE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1395B780-8CD4-4B97-859C-30EF19032813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1395B780-8CD4-4B97-859C-30EF19032813}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +80,8 @@ Global
 		{32936227-D850-4B4A-A2CE-E32140EF2D5D} = {F4CCB77B-391B-4DD6-B2C1-2A798834BE56}
 		{896F3ABE-06E9-4C97-A09C-1DA131B96AB7} = {F4CCB77B-391B-4DD6-B2C1-2A798834BE56}
 		{71C9281E-F23E-45C3-A724-D2AB258C3754} = {F4CCB77B-391B-4DD6-B2C1-2A798834BE56}
+		{76F3BAFD-43C9-461C-AFB6-89198FC6BE76} = {004240E7-71A4-4B56-8906-607EC03BAF74}
+		{1395B780-8CD4-4B97-859C-30EF19032813} = {004240E7-71A4-4B56-8906-607EC03BAF74}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A924C7D3-0272-4F15-B7AD-0F07FA035C66}

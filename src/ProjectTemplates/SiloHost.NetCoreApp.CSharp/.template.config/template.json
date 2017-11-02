@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Microsoft",
+  "classifications": [ "Orleans" ],
+  "name": "Orleans Silo Host",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "A project for setting up and running an Orleans Silo",
+  "groupIdentity": "Orleans.Hosting",
+  "precedence": "5000",
+  "identity": "Orleans.SiloHost.NetCoreApp.CSharp",
+  "shortName": "silohost",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Company.SiloHost",
+  "preferNameDirectory": true,
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "Company.SiloHost.csproj"
+    }
+  ],
+  "symbols": {
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    }
+  },
+  "defaultName": "Company.SiloHost",
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}

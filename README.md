@@ -39,19 +39,89 @@ dotnet new
 The output should contain the Orleans Templates amongst the other installed templates:
 
 ```
-Templates                                         Short Name           Language                   Tags
+Templates                                         Short Name           Language          Tags
 ---------------------------------------------------------------------------------------------------------------------
-Orleans Grain Class Collection                    grains               [C#], F#, VB               Orleans
-Orleans Grain Interface Collection                graininterfaces      [C#], VB                   Orleans
-Orleans Grain Interface                           graininterface       [C#]                       Orleans
+Orleans Grain Class Collection                    grains               [C#], F#, VB      Orleans
+Orleans Grain Interface Collection                graininterfaces      [C#], VB          Orleans
+Orleans Client Application                        clusterclient        [C#]              Orleans
+Orleans Silo Host                                 silohost             [C#]              Orleans
+Orleans Grain Interface                           graininterface       [C#]              Orleans
 ```
 
-The [official documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x) of the CLI provides detailed usage of the available command line options.
+# Creating your first Orleans application
+
+The following commands should be executed from any CLI shell.
+
+Create a Blank Solution:
+```
+dotnet new sln -n Contoso
+```
+
+Create the Grain interfaces project and add it to the Solution:
+```
+dotnet new graininterfaces -n Contoso.GrainInterfaces
+dotnet sln add Contoso.GrainInterfaces\Contoso.GrainInterfaces.csproj
+```
+Create the Grain implementation project and add it to the Solution:
+```
+dotnet new grains -n Contoso.Grains
+dotnet sln add Contoso.Grains\Contoso.Grains.csproj
+```
+
+Add a project reference for the Grain interface project to the Grain implementation project:
+```
+dotnet add Contoso.Grains reference Contoso.GrainInterfaces\Contoso.GrainInterfaces.csproj
+```
+
+Add ```using Contoso.GrainInterfaces;``` to the ```Contoso.Grains\Grain1.cs``` file.
+
+Create the Silo host project and add it to the Solution:
+```
+dotnet new silohost -n Contoso.Silo
+dotnet sln add Contoso.Silo\Contoso.Silo.csproj
+```
+
+Add a project reference for the Grain implementation project to the Silo host project:
+```
+dotnet add Contoso.Silo reference Contoso.Grains\Contoso.Grains.csproj
+```
+
+Add ```using Contoso.Grains;``` to the ```Contoso.SiloHost\Program.cs``` file.
+
+After the ```UseConfiguration(config)``` line in ```Program.cs``` add, to register the grain classes with the Silo:
+```.AddApplicationPartsFromReferences(typeof(Grain1).Assembly)```
+
+Create a cluster client application and add it to the Solution:
+
+```
+dotnet new orleansclient -n Contoso.ClusterClient
+dotnet sln add Contoso.ClusterClient\Contoso.ClusterClient.csproj
+```
+
+Add a project reference for the Grain interface project to the Cluster Client application project:
+```
+dotnet add Contoso.ClusterClient reference Contoso.GrainInterfaces\Contoso.GrainInterfaces.csproj
+```
+
+Add ```using Contoso.GrainInterfaces;``` to the ```Contoso.ClusterClient\Program.cs``` file.
+
+After the ```UseConfiguration(config)``` line in ```Program.cs``` add, to register the grain interfaces with the client:
+```.AddApplicationPartsFromReferences(typeof(IGrain1).Assembly)```
+
+Build the solution:
+```
+dotnet build
+```
+
+## Congratulations, you created your first - yet empty - Orleans application.
+
+Now you can add methods to the Grain interfaces project and Grain implementation project, then call it from the client application.
 
 # Contribution
 
 If you like to contribute to the development of Orleans Templates, here are some useful links about ```dotnet``` templates:
 
+- [dotnet CLI official documentation](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new?tabs=netcore2x)
 - [How to create templates](https://aka.ms/dotnetnew-create-templates)
 - [Template Engine repository](https://github.com/dotnet/templating)
 - [Template Engine samples repository](https://github.com/dotnet/dotnet-template-samples)
