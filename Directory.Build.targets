@@ -1,0 +1,10 @@
+<Project>
+  <!-- Set InformationVersion here, since $(Version) is already set at this point. -->
+  <PropertyGroup>
+    <InformationalVersion>$(Version). Commit Hash: $(GitHeadSha)</InformationalVersion>
+  </PropertyGroup>
+
+  <!-- Not all project type has a default Pack target -->
+  <Target Name="Pack">
+  </Target>
+</Project>

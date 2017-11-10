@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json.schemastore.org/vs-2017.3.host",
+  "name": {
+    "text": "Orleans Grain Class Collection",
+    "package": "{59E4E5D4-649E-46B7-8BD7-329407E55DE7}",
+    "id": "1002"
+  },
+  "description": {
+    "text": "A project for defining a collection of grain classes to be distributed as a unit",
+    "package": "{59E4E5D4-649E-46B7-8BD7-329407E55DE7}",
+    "id": "1003"
+  },
+  "order": 300,
+  "icon": "GrainImplementationCSharp.ico",
+  "learnMoreLink": "https://github.com/dotnet/orleans",
+  "uiFilters": [ "orleans" ],
+  "legacyTemplateIdentity": "Orleans.GrainImplementation.NetStandard.CSharp",
+  "minFullFrameworkVersion": "4.6.1"
+}
