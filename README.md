@@ -117,6 +117,18 @@ dotnet build
 
 Now you can add methods to the Grain interfaces project and Grain implementation project, then call it from the client application.
 
+# Building the template solution
+
+The template project is an old style ```csproj```, so it only can built with ```MSBuild.exe```. Since the Package Restore is not automatic in this case that's must be done first.
+
+Since NuGet workload was not part of VS Build payload before 15.4, on build servers 15.4 needed.
+
+On a desktop Visual Studio 2017 installation a ```Developer Command Prompt``` need to be opened, then the following 2 commands are building the solution:
+```
+msbuild /t:restore
+msbuild
+```
+
 # Contribution
 
 If you like to contribute to the development of Orleans Templates, here are some useful links about ```dotnet``` templates:
