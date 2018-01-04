@@ -35,7 +35,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FSharp", "FSharp", "{71C928
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.SiloHost", "src\ProjectTemplates\SiloHost.NetCoreApp.CSharp\Company.SiloHost.csproj", "{76F3BAFD-43C9-461C-AFB6-89198FC6BE76}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.OrleansClient", "src\ProjectTemplates\OrleansClient.NetCoreApp.CSharp\Company.OrleansClient.csproj", "{1395B780-8CD4-4B97-859C-30EF19032813}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Company.ClusterClient", "src\ProjectTemplates\ClusterClient.NetCoreApp.CSharp\Company.ClusterClient.csproj", "{1395B780-8CD4-4B97-859C-30EF19032813}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
