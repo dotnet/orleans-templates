@@ -3,12 +3,9 @@
 
 # Overview
 
-This project contains the Project to make it easier to getting started with [Orleans](https://github.com/dotnet/orleans).
+This project contains the templates for getting started with [Orleans](https://github.com/dotnet/orleans).
 
-The templates are leveraging the new [dotnet templating engine](https://github.com/dotnet/templating).
-
-# Provided templates
-
+The templates are leveraging the [dotnet templating engine](https://github.com/dotnet/templating).
 
 # Installation
 
