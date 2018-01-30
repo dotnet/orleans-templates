@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Microsoft.Orleans.Templates" Version="1.0.0" Language="en-US" Publisher="Microsoft" />
+    <DisplayName>Microsoft Orleans Templates for Visual Studio 2017</DisplayName>
+    <Description xml:space="preserve">Project and Item templates for Visual Studio 2017.
+C#, F#, VB Project and item templates
+</Description>
+    <MoreInfo>https://github.com/dotnet/orleans</MoreInfo>
+    <License>Resources\License.txt</License>
+    <Icon>Resources\Orleans-nuget.png</Icon>
+    <PreviewImage>Resources\Orleans-nuget.png</PreviewImage>
+    <Tags>Orleans,Cloud-Computing,Actor-Model,Actors,Distributed-Systems,C#,F#,VB</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Version="[15.0,16.0)" Id="Microsoft.VisualStudio.Community" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.6.1,)" />
+  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.26606.0,16.0)" DisplayName="Visual Studio core editor" />
+    <Prerequisite Id="Microsoft.VisualStudio.Component.Web" Version="[15.0.26606.0,16.0)" DisplayName="ASP.NET and web development tools" />
+  </Prerequisites>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" Path="Output\Templates" />
+  </Assets>
+</PackageManifest>

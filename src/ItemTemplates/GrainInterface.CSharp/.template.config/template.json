@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Microsoft",
+  "classifications": [ "Orleans" ],
+  "name": "Orleans Grain Interface",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "An empty grain communication interface",
+  "groupIdentity": "Orleans.GrainInterface",
+  "precedence": "5000",
+  "identity": "Orleans.GrainInterface.CSharp",
+  "shortName": "graininterface",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "Company.GrainInterfaces",
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "IGrain1.cs"
+    }
+  ],
+  "defaultName": "Company.GrainInterfaces"
+}

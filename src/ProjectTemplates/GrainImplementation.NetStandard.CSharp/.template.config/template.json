@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Microsoft",
+  "classifications": [ "Orleans" ],
+  "name": "Orleans Grain Class Collection",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "A project for defining a collection of grain classes to be distributed as a unit",
+  "groupIdentity": "Orleans.GrainImplementation",
+  "precedence": "5000",
+  "identity": "Orleans.GrainImplementation.NetStandard.CSharp",
+  "shortName": "grains",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Company.Grains",
+  "preferNameDirectory": true,
+  "guids": [],
+  "primaryOutputs": [
+    {
+      "path": "Company.Grains.csproj"
+    }
+  ],
+  "symbols": {
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the project on create.",
+      "defaultValue": "false"
+    }
+  },
+  "defaultName": "Company.Grains",
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this project.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}
