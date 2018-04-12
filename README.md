@@ -24,7 +24,7 @@ Template updates for Visual Studio 2017 can be done by updating the installed VS
 .NET Core command-line (CLI) template installation can be done by invoking ```dotnet.exe``` from the shell. The minimum version required is 2.0.
 
 ```
-dotnet new --install Microsoft.Orleans.Templates:*
+dotnet new --install Microsoft.Orleans.Templates::*
 ```
 
 The template installation can be checked with the following command line:
