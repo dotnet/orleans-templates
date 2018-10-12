@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Microsoft",
+  "classifications": [ "Orleans" ],
+  "name": "Orleans Solution",
+  "generatorVersions": "[1.0.0.0-*)",
+  "description": "A solution for setting up and running an Orleans application",
+  "groupIdentity": "Orleans",
+  "precedence": "5000",
+  "identity": "Orleans.Solution.CSharp",
+  "shortName": "orleans",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "Company",
+  "preferNameDirectory": true,
+  "guids": [],
+  "primaryOutputs": [
+    { "path": "Company.sln" },
+    { "path": "src/ClusterClient/Company.ClusterClient.csproj" },
+    { "path": "src/SiloHost/Company.SiloHost.csproj" },
+    { "path": "src/GrainInterfaces/Company.GrainInterfaces.csproj" },
+    { "path": "src/Grains/Company.Grains.csproj" }
+  ],
+  "symbols": {
+    "skipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "If specified, skips the automatic restore of the solution on create.",
+      "defaultValue": "false"
+    }
+  },
+  "defaultName": "Company",
+  "postActions": [
+    {
+      "condition": "(!skipRestore)",
+      "description": "Restore NuGet packages required by this solution.",
+      "manualInstructions": [
+        { "text": "Run 'dotnet restore'" }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}

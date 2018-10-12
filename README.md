@@ -43,9 +43,33 @@ Orleans Grain Interface Collection                graininterfaces      [C#], VB 
 Orleans Client Application                        clusterclient        [C#]              Orleans
 Orleans Silo Host                                 silohost             [C#]              Orleans
 Orleans Grain Interface                           graininterface       [C#]              Orleans
+Orleans Solution                                  orleans              [C#]              Orleans
 ```
 
 # Creating your first Orleans application
+
+Execute the following command from any CLI shell.
+
+```bash
+dotnet new orleans -n Contoso
+```
+
+You should now have a Contoso directory with a solution setup and ready to go. The directory structure will look like:
+
+- Contoso.sln
+- src
+    - ClusterClient
+    - Grains
+    - GrainInterfaces
+    - SiloHost
+
+You can even open it with VS Code, build, and run it out of the box. Of course, you don't have to use VS Code, you could use Visual Studio, or VIM and the dotnet CLI.
+
+>If you are using VS Code, be sure and select the "Silo Host / Cluster Client" debug configuration to launch the Silo Host and the Cluster Client at the *same time*.
+
+# Creating your second Orleans application
+
+Of course, sometimes the first steps require a steadier footing. If you want to manage the solution from the ground up, you're welcome to add each component individually.
 
 The following commands should be executed from any CLI shell.
 
